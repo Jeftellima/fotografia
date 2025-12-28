@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Contact — Jefte Lunari</title>
+  <link rel="icon" type="image/x-icon" href="https://images.squarespace-cdn.com/content/v1/57893258579fb32c7f6e8abf/1468955220759-7Z3QTDLGD9IBWCFNF95Y/favicon.ico?format=100w"/>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700">
+  <link rel="stylesheet" type="text/css" href="https://static1.squarespace.com/static/sitecss/57893258579fb32c7f6e8abf/75/4fd11f32c4aad9b01c9e624c/57893258579fb32c7f6e8ac6/1362/site.css"/>
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+  <style>
+    /* ESPAÇAMENTO DO CABEÇALHO */
+    #header {
+      display: flex;
+      justify-content: space-between; 
+      align-items: center;
+      padding: 60px 0 40px 0; 
+      background-color: #000 !important;
+    }
+
+    body { background-color: #000 !important; color: #fff !important; }
+    a { color: #fff !important; text-decoration: none; }
+    
+    #logo h1.logo { margin: 0; font-size: 24px; letter-spacing: 2px; text-transform: uppercase; }
+
+    .main-nav ul { display: flex; list-style: none; gap: 30px; margin: 0; padding: 0; }
+    .main-nav a { font-size: 11px; text-transform: uppercase; letter-spacing: 2px; }
+
+    /* FORMULÁRIO COM TEXTOS DE EXEMPLO (PLACEHOLDERS) */
+    .contact-container { max-width: 600px; margin: 40px 0; }
+    .form-group { margin-bottom: 25px; }
+    .form-group label { 
+      display: block; 
+      font-size: 11px; 
+      text-transform: uppercase; 
+      letter-spacing: 2px; 
+      margin-bottom: 10px; 
+      color: #888; 
+    }
+    .form-group input, .form-group textarea {
+      width: 100%; 
+      padding: 15px; 
+      background: #111; 
+      border: 1px solid #333; 
+      color: #fff; 
+      font-family: inherit; 
+      box-sizing: border-box;
+      font-size: 14px;
+    }
+
+    .btn-send {
+      background: #fff; color: #000; border: none; padding: 18px 50px; text-transform: uppercase; font-weight: 700; cursor: pointer;
+    }
+
+    /* BOTÃO WHATSAPP */
+    .whatsapp-float {
+      position: fixed; width: 60px; height: 60px; bottom: 40px; right: 40px; background-color: #25d366;
+      color: #FFF !important; border-radius: 50px; text-align: center; font-size: 30px; z-index: 1000;
+      display: flex; align-items: center; justify-content: center;
+    }
+
+    .page-divider { border-bottom: 1px solid #222; margin: 20px 0; }
+  </style>
+</head>
+
+<body class="collection-type-page">
+
+  <a href="https://wa.me/5541999015979" class="whatsapp-float" target="_blank">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+
+  <div id="canvas" style="max-width: 1100px; margin: 0 auto; padding: 0 50px;">
+
+    <header id="header">
+      <div id="logo">
+        <h1 class="logo"><a href="index.html">Jefte Lunari</a></h1>
+      </div>
+      <nav id="topNav" class="main-nav">
+        <ul>
+          <li><a href="index.html">PHOTOS</a></li>
+          <li><a href="sobre.html">SOBRE</a></li>
+          <li><a href="video.html">VIDEO</a></li>
+          <li class="active-link"><a href="contact.html" style="border-bottom: 1px solid #fff; padding-bottom: 5px;">CONTACT</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <div class="page-divider"></div>
+
+    <section id="page" style="margin-top: 50px;">
+      <p style="font-size: 15px; line-height: 1.8;">"Eternizar momentos através das lentes é mais do que meu trabalho, é minha paixão. Se você se identifica com meu olhar sobre a natureza e a arquitetura e deseja transformar seus momentos em memórias fotográficas, entre em contato. Estou pronto para registrar sua história.".</p>
+      
+      <div class="contact-container">
+        <form action="https://formspree.io/f/COLOQUE_SEU_ID_AQUI" method="POST">
+          
+          <div class="form-group">
+            <label>Nome Completo</label>
+            <input type="text" name="name" placeholder="Seu nome" required>
+          </div>
+
+          <div class="form-group">
+            <label>E-mail</label>
+            <input type="email" name="email" placeholder="seu@email.com" required>
+          </div>
+
+          <div class="form-group">
+            <label>Telefone / WhatsApp</label>
+            <input type="tel" name="phone" placeholder="(00) 00000-0000">
+          </div>
+
+          <div class="form-group">
+            <label>Sua Mensagem</label>
+            <textarea name="message" rows="6" placeholder="Como posso ajudar?" required></textarea>
+          </div>
+
+          <button type="submit" class="btn-send">Enviar Mensagem</button>
+          
+        </form>
+      </div>
+    </section>
+
+    <footer id="footer" style="padding: 60px 0; text-align: center; font-size: 12px; color: #555;">
+      <p>This site and its content, including all images, copyright © Jefte Lunari. All rights reserved.</p>
+    </footer>
+
+  </div>
+
+</body>
+</html>
