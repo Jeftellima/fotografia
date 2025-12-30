@@ -93,7 +93,7 @@
       <p style="font-size: 15px; line-height: 1.8;">"Eternizar momentos através das lentes é mais do que meu trabalho, é minha paixão. Se você se identifica com meu olhar sobre a natureza e a arquitetura e deseja transformar seus momentos em memórias fotográficas, entre em contato. Estou pronto para registrar sua história.".</p>
       
       <div class="contact-container">
-        <form action="https://formspree.io/f/COLOQUE_SEU_ID_AQUI" method="POST">
+        <form action="https://formspree.io/f/mregwybv" method="POST">
           
           <div class="form-group">
             <label>Nome Completo</label>
@@ -115,9 +115,35 @@
             <textarea name="message" rows="6" placeholder="Como posso ajudar?" required></textarea>
           </div>
 
-          <button type="submit" class="btn-send">Enviar Mensagem</button>
           
+          <button type="submit" class="btn-send">Enviar Mensagem</button>
         </form>
+
+        <div id="success-message" style="display:none; margin-top:30px; font-size:14px; color:#aaa;">
+          ✔ Mensagem enviada com sucesso.
+        </div>
+
+        <script>
+          const form = document.querySelector("form");
+          const success = document.getElementById("success-message");
+
+          form.addEventListener("submit", function(e){
+            e.preventDefault();
+            fetch(form.action, {
+              method: "POST",
+              body: new FormData(form),
+              headers: { 'Accept': 'application/json' }
+            }).then(response => {
+              if (response.ok) {
+                form.reset();
+                success.style.display = "block";
+              } else {
+                alert("Erro ao enviar mensagem. Tente novamente.");
+              }
+            });
+          });
+        </script>
+
       </div>
     </section>
 
